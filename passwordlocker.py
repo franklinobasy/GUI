@@ -11,7 +11,7 @@ class passwordlocker():
         self.start.title("Password Locker")
         self.start.geometry("700x400+200+200")
         self.start.resizable(0,0)
-        self.start.iconbitmap("C:/Users/franklinobasy/Downloads/GUI/photoicons/lock_icon.ico")
+        #self.start.iconbitmap("GUI-master/photoicons/lock_icon.ico")
         #self.start.attributes("-alpha", 0.5)
 
         #displays
@@ -29,7 +29,7 @@ class passwordlocker():
             self.proceed.config(bg = "Light Green")
 
         #Images
-        img = Image.open("C:/Users/franklinobasy/Downloads/GUI/photoicons/lock.png")
+        img = Image.open("GUI-master/photoicons/lock.png")
         img = img.resize((200,200))
         lock = ImageTk.PhotoImage(img)
         lock_label = tk.Label(self.start, image = lock)
@@ -89,7 +89,7 @@ class passwordlocker():
         self._UI.title("Password Locker")
         self._UI.geometry("700x400+200+200")
         self._UI.resizable(0,0)
-        self._UI.iconbitmap("C:/Users/franklinobasy/Downloads/GUI/photoicons/lock_icon.ico")
+        self._UI.iconbitmap("GUI-master/photoicons/lock_icon.ico")
 
         #load all frames
          # text variables
@@ -101,6 +101,7 @@ class passwordlocker():
         #Split sections
         self.menu_section = tk.Frame(self._UI, bg = "Grey", width = 70, height = 400, bd = 2)
         self.menu_section.grid_propagate(False)
+        
         self.main_section = tk.Frame(self._UI, width = 630, height = 400)
         self.main_section.pack_propagate(False)
 
@@ -110,19 +111,19 @@ class passwordlocker():
 
         #menu_section slave
         #images
-        self.img_a = Image.open(r"C:/Users/franklinobasy/Downloads/GUI/photoicons/user.png")
+        self.img_a = Image.open(r"GUI-master/photoicons/user.png")
         self.img_a = self.img_a.resize((50,50))
         self.account = ImageTk.PhotoImage(self.img_a)
-        self.img_b = Image.open(r"C:/Users/franklinobasy/Downloads/GUI/photoicons/add.png")
+        self.img_b = Image.open(r"GUI-master/photoicons/add.png")
         self.img_b = self.img_b.resize((50,50))
         self.account1 = ImageTk.PhotoImage(self.img_b)
-        self.img_c = Image.open(r"C:/Users/franklinobasy/Downloads/GUI/photoicons/view.png")
+        self.img_c = Image.open(r"GUI-master/photoicons/view.png")
         self.img_c = self.img_c.resize((50,50))
         self.account2 = ImageTk.PhotoImage(self.img_c)
-        self.img_d = Image.open(r"C:/Users/franklinobasy/Downloads/GUI/photoicons/viewall.png")
+        self.img_d = Image.open(r"GUI-master/photoicons/viewall.png")
         self.img_d = self.img_d.resize((46,46))
         self.account3 = ImageTk.PhotoImage(self.img_d)
-        self.img_e = Image.open(r"C:/Users/franklinobasy/Downloads/GUI/photoicons/delete.png")
+        self.img_e = Image.open(r"GUI-master/photoicons/delete.png")
         self.img_e = self.img_e.resize((46,46))
         self.account4 = ImageTk.PhotoImage(self.img_e)
         
@@ -142,7 +143,7 @@ class passwordlocker():
         self.e_button = tk.Button(self.menu_section,image = self.account4, compound = tk.LEFT,
                               bg = "Grey",state = "disabled", fg = "White", bd = 0, font = ("courier",9,"bold"))
         #main_section slave
-        self.img_b = Image.open(r"C:/Users/franklinobasy/Downloads/GUI/photoicons/key.png")
+        self.img_b = Image.open(r"GUI-master/photoicons/key.png")
         self.img_b = self.img_b.resize((200,200))
         self._account = ImageTk.PhotoImage(self.img_b)
         label_image = tk.Label(self.main_section, image = self._account)
@@ -196,6 +197,7 @@ class passwordlocker():
         
         def _signSucess():
             check = self.lock.sign_in(self.username.get(),self.password.get())
+            print((self.username.get(),self.password.get()))
             if check == True:
                 msg.showinfo("Sign-In Successful", "Welcome to Password Locker")
                 self.InWindow.destroy()
@@ -223,13 +225,13 @@ class passwordlocker():
 
            
         #Images
-        self.a = Image.open("C:/Users/franklinobasy/Downloads/GUI/photoicons/e.png")
+        self.a = Image.open("GUI-master/photoicons/e.png")
         self.a = self.a.resize((25,25))
-        self.b = Image.open("C:/Users/franklinobasy/Downloads/GUI/photoicons/ea.png")
+        self.b = Image.open("GUI-master/photoicons/ea.png")
         self.b = self.b.resize((25,25))
-        self.c = Image.open("C:/Users/franklinobasy/Downloads/GUI/photoicons/go2.png")
+        self.c = Image.open("GUI-master/photoicons/go2.png")
         self.c = self.c.resize(((40,40)))
-        self.d = Image.open("C:/Users/franklinobasy/Downloads/GUI/photoicons/go1.png")
+        self.d = Image.open("GUI-master/photoicons/go1.png")
         self.d = self.d.resize(((40,40)))
         self.a_ = ImageTk.PhotoImage(self.a)
         self.b_ = ImageTk.PhotoImage(self.b)
@@ -338,13 +340,13 @@ class passwordlocker():
 
         
         #Images
-        self.a = Image.open("C:/Users/franklinobasy/Downloads/GUI/photoicons/e.png")
+        self.a = Image.open("GUI-master/photoicons/e.png")
         self.a = self.a.resize((25,25))
-        self.b = Image.open("C:/Users/franklinobasy/Downloads/GUI/photoicons/ea.png")
+        self.b = Image.open("GUI-master/photoicons/ea.png")
         self.b = self.b.resize((25,25))
-        self.c = Image.open("C:/Users/franklinobasy/Downloads/GUI/photoicons/go2.png")
+        self.c = Image.open("GUI-master/photoicons/go2.png")
         self.c = self.c.resize(((40,40)))
-        self.d = Image.open("C:/Users/franklinobasy/Downloads/GUI/photoicons/go1.png")
+        self.d = Image.open("GUI-master/photoicons/go1.png")
         self.d = self.d.resize(((40,40)))
         self.a_ = ImageTk.PhotoImage(self.a)
         self.b_ = ImageTk.PhotoImage(self.b)
@@ -412,11 +414,11 @@ class passwordlocker():
         
     def frames(self):
         #Userframe images
-        self.uf_img1 = Image.open("photoicons/powerOn.png")
+        self.uf_img1 = Image.open("GUI-master/photoicons/powerOn.png")
         self.uf_img1 = self.uf_img1.resize((50,50))
         self.uf_img1 = ImageTk.PhotoImage(self.uf_img1)
 
-        self.uf_img2 = Image.open("photoicons/powerOff.png")
+        self.uf_img2 = Image.open("GUI-master/photoicons/powerOff.png")
         self.uf_img2 = self.uf_img2.resize((50,50))
         self.uf_img2 = ImageTk.PhotoImage(self.uf_img2)
         
@@ -475,27 +477,27 @@ class passwordlocker():
         self.addAccount_frame.grid_propagate(False)
 
         #Add Account widget
-        self.addimg1 = Image.open("photoicons/addnew1.png")
+        self.addimg1 = Image.open("GUI-master/photoicons/addnew1.png")
         self.addimg1 = self.addimg1.resize((300,65))
         self.addimg1 =ImageTk.PhotoImage(self.addimg1)
 
-        self.addimg2a = Image.open("photoicons/newaccount.png")
+        self.addimg2a = Image.open("GUI-master/photoicons/newaccount.png")
         self.addimg2a = self.addimg2a.resize((250,40))
         self.addimg2a =ImageTk.PhotoImage(self.addimg2a)
 
-        self.addimg2b = Image.open("photoicons/newusername.png")
+        self.addimg2b = Image.open("GUI-master/photoicons/newusername.png")
         self.addimg2b = self.addimg2b.resize((250,40))
         self.addimg2b =ImageTk.PhotoImage(self.addimg2b)
 
-        self.addimg2c = Image.open("photoicons/newpassword.png")
+        self.addimg2c = Image.open("GUI-master/photoicons/newpassword.png")
         self.addimg2c = self.addimg2c.resize((250,40))
         self.addimg2c =ImageTk.PhotoImage(self.addimg2c)
 
-        self.addimg3 = Image.open("photoicons/save1.png")
+        self.addimg3 = Image.open("GUI-master/photoicons/save1.png")
         self.addimg3 = self.addimg3.resize((50,25))
         self.addimg3 =ImageTk.PhotoImage(self.addimg3)
 
-        self.addimg3a = Image.open("photoicons/save.png")
+        self.addimg3a = Image.open("GUI-master/photoicons/save.png")
         self.addimg3a = self.addimg3a.resize((50,25))
         self.addimg3a =ImageTk.PhotoImage(self.addimg3a)
 
